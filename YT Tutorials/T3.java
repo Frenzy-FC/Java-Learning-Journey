@@ -18,7 +18,7 @@ public class T3 {
         double gwa = scanner.nextDouble();
 
         // user input for boolean
-        System.out.println("Are you gay? (true/fales)");
+        System.out.print("Are you gay? (true/false)");
         boolean isGay = scanner.nextBoolean();
 
         // user input for boolean (if version)
