@@ -1,4 +1,4 @@
-import java.nio.channels.Pipe.SourceChannel;
+
 import java.util.Scanner;
 
 public class T14 {
@@ -11,11 +11,11 @@ public class T14 {
         String name = "";
 
         while(name.isEmpty()){
-            System.out.print("Enter your name");
+            System.out.print("Enter your name: ");
             name = scanner.nextLine();
         }
 
-        System.out.printf("Hello %s", name);
+        System.out.printf("Hello %s\n", name);
 
         // Example #2
 
