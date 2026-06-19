@@ -13,7 +13,7 @@ public class T10 {
         email = scanner.nextLine();
 
         username = email.substring(0, email.indexOf("@"));
-        domain = email.substring(email.indexOf("@"));
+        domain = email.substring(email.indexOf("@") + 1);
 
         System.out.printf("Your email is %s, by slicing your username is %s and your domain is %s", email, username, domain);
 
