@@ -17,7 +17,7 @@ public class T11 {
         System.out.printf("Your time of day is %s\n", timeOfDay);
         
         double taxRate = (income >= 40000) ? 0.25 : 0.15;
-        System.out.printf("Your income is %d and your tax rate is %f\n", income, taxRate);
+        System.out.printf("Your income is %d and your tax rate is %.2f\n", income, taxRate);
 
         
         
