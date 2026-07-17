@@ -225,6 +225,10 @@ public class ATM {
                             utils.error("Amount to transfer can't be negative ^^");
                             continue;
                         }
+                        else if (account.deposit < 100){
+                            utils.error("Current Balance 100 ^^");
+                            continue;
+                        }
                         else if (amountTrans > account.deposit){
                             utils.error("Insufficient Funds ^^");
                             continue;

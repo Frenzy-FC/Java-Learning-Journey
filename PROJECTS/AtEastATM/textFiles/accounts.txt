@@ -1,14 +1,14 @@
 ==================================================
-Full Name  : Frenz
+Full Name  : Frenz Carlo C. Cuarteros
 Username   : Frenz
-PIN        : 1000
-Balance    : PHP 100.00
+PIN        : 1001
+Balance    : PHP 200.00
 ==================================================
 
 ==================================================
-Full Name  : Merie
+Full Name  : Merie Christ B. Pedroso
 Username   : Merie
 PIN        : 1000
-Balance    : PHP 600.00
+Balance    : PHP 400.00
 ==================================================
 
