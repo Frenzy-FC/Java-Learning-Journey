@@ -1,11 +1,14 @@
 package PROJECTS.AtEastATM;
 import java.util.InputMismatchException;
+
+import PROJECTS.AtEastATM.file.fileManager;
 import PROJECTS.AtEastATM.service.ATM;
 import PROJECTS.AtEastATM.utils.utils;
 // main program
 public class Main {
     public static void main(String[] args) {
         // AtEast ATM System
+        fileManager.loadUserAccounts();
         boolean isRunning = true;
         int choice;
 
