@@ -2,6 +2,12 @@
 
 A Java ATM Management System that simulates banking operations through a console application. This project demonstrates object-oriented programming, file handling, modular architecture, and transaction management.
 
+![Status](https://img.shields.io/badge/Status-Active%20Development-yellow)
+![Version](https://img.shields.io/badge/Version-v1.0.0-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
+
+> 🚧 **Status:** This project is actively maintained and new features will continue to be added.
+
 ## Features:
 
 ### 📍User Authentication
