@@ -1,10 +1,13 @@
 package PROJECTS.AtEastLBS.utils;
 
+import java.util.Random;
 import java.util.Scanner;
+
+import PROJECTS.AtEastLBS.data.data;
 
 public class utils {
     // scanner util
-    private static final Scanner scanner = new Scanner(System.in);
+    public static final Scanner scanner = new Scanner(System.in);
     // for centering the text
     public static String center(String text, int width){
         if(text.length() >= width){
@@ -37,5 +40,21 @@ public class utils {
         System.out.println("\n" + "=".repeat(50));
         System.out.println(center(message, 50));
         System.out.println("=".repeat(50));
+    }
+
+    // for generating user ID
+
+    public static String userID(){
+        Random random = new Random();
+
+        String userID;
+
+        do{
+            int number = random.nextInt(9000) + 1000;
+
+            userID = "MEM" + number;
+        }while(data.users.containsKey(userID));
+
+        return userID;
     }
 }

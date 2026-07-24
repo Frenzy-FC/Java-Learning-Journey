@@ -8,10 +8,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDateTime;
 
-import javax.xml.crypto.Data;
+
 
 import PROJECTS.AtEastLBS.utils.utils;
 import PROJECTS.AtEastLBS.data.data;
+import PROJECTS.AtEastLBS.model.admin;
 import PROJECTS.AtEastLBS.model.book;
 import PROJECTS.AtEastLBS.model.borrowLog;
 import PROJECTS.AtEastLBS.model.user;
@@ -22,6 +23,7 @@ public class fileManager {
     private static final String bookFile = "PROJECTS\\AtEastLBS\\textFiles\\books.txt";
     private static final String userFile = "PROJECTS\\AtEastLBS\\textFiles\\users.txt";
     private static final String borrowFile = "textFiles\\borrowRecords.txt";
+    private static final String adminFile = "PROJECTS\\AtEastLBS\\textFiles\\admins.txt";
     // for saving a book
     public static void saveBooks(book book){
         try {
@@ -335,5 +337,40 @@ public class fileManager {
             utils.error("Something went wrong");;
         }
     }
+    // for loading a admin 
+    public static void loadAdminAccounts(){
+        File file = new File(adminFile);
 
+        if(!file.exists()){
+            return;
+        }
+
+        try {
+            BufferedReader adminReader = new BufferedReader(new FileReader(file));
+            while (adminReader.ready()) {
+
+                adminReader.readLine(); // ======
+
+                String adminID = adminReader.readLine().split(":")[1].trim();
+                String username = adminReader.readLine().split(":")[1].trim();
+                String password = adminReader.readLine().split(":")[1].trim();
+
+                adminReader.readLine(); // ======
+                adminReader.readLine(); // blank line
+
+                admin admin = new admin(adminID, username, password);
+
+                data.admins.put(adminID, admin);
+            }
+
+            adminReader.close();
+
+        } 
+        catch(FileNotFoundException e){
+            utils.error("Could not locate file location ^^");;
+        }
+        catch(IOException e){
+            utils.error("Something went wrong");;
+        }
+    }
 }
