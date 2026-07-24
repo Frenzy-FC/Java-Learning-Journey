@@ -65,7 +65,7 @@ public class auth {
 
         String userID = utils.userID();
 
-        user user = new user(userID, userID, userContact);
+        user user = new user(userID, userName, userContact);
 
         data.users.put(userID, user);
 
